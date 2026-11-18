@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightLife Hospital — Quality Healthcare for Everyone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<script>
+/* Built-in illustrated images. If a photo in /images is missing, these are shown instead. */
+var ART = (function(){
+  var W='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">';
+  var a = {};
+  a.cardiology = W+'<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d7a"/><stop offset="1" stop-color="#ff9a5d"/></linearGradient></defs><rect width="400" height="260" fill="url(#g)"/><circle cx="330" cy="40" r="90" fill="#fff" opacity=".12"/><circle cx="60" cy="240" r="80" fill="#fff" opacity=".1"/><path d="M200 220C120 165 85 125 85 90a50 50 0 0 1 115-18a50 50 0 0 1 115 18c0 35-35 75-115 130z" fill="#fff"/><path d="M200 205C135 158 105 124 105 95a36 36 0 0 1 95-14a36 36 0 0 1 95 14c0 29-30 63-95 110z" fill="#ff5d7a" opacity=".25"/><path d="M20 140H120L145 95L175 175L205 110L222 140H380" stroke="#0b1437" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  a.neurology = W+'<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1f8f"/><stop offset="1" stop-color="#9a5bff"/></linearGradient></defs><rect width="400" height="260" fill="url(#g)"/><g fill="#fff" opacity=".35"><circle cx="40" cy="40" r="3"/><circle cx="350" cy="60" r="3"/><circle cx="320" cy="220" r="3"/><circle cx="70" cy="210" r="3"/></g><path d="M200 55c-30-30-90-15-95 35c-30 10-35 55-8 72c-5 35 35 55 65 40c10 12 28 12 38 0c30 15 70-5 65-40c27-17 22-62-8-72c-5-50-65-65-95-35z" fill="#fff"/><path d="M200 60v135M200 90c-25 0-40 15-45 35M200 130c-25 0-40 12-45 30M200 100c22 0 38 14 42 32M200 150c22 0 38 8 42 24" stroke="#7a4dff" stroke-width="5" fill="none" stroke-linecap="round"/><g fill="#22d3ee"><circle cx="155" cy="125" r="8"/><circle cx="155" cy="160" r="8"/><circle cx="242" cy="132" r="8"/><circle cx="242" cy="174" r="8"/></g></svg>';
+  a.orthopedics = W+'<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1437"/><stop offset="1" stop-color="#1d5bd8"/></linearGradient></defs><rect width="400" height="260" fill="url(#g)"/><g transform="rotate(-28 200 130)"><rect x="95" y="112" width="210" height="36" rx="18" fill="#e9f1ff"/><circle cx="95" cy="104" r="26" fill="#e9f1ff"/><circle cx="95" cy="156" r="26" fill="#e9f1ff"/><circle cx="305" cy="104" r="26" fill="#e9f1ff"/><circle cx="305" cy="156" r="26" fill="#e9f1ff"/><rect x="150" y="124" width="100" height="12" rx="6" fill="#22d3ee" opacity=".7"/><g fill="#7ab4ff"><circle cx="165" cy="130" r="4"/><circle cx="200" cy="130" r="4"/><circle cx="235" cy="130" r="4"/></g></g><circle cx="340" cy="40" r="70" fill="#22d3ee" opacity=".15"/></svg>';
+  a.general = W+'<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0fa57a"/><stop offset="1" stop-color="#47e8b8"/></linearGradient></defs><rect width="400" height="260" fill="url(#g)"/><circle cx="340" cy="50" r="80" fill="#fff" opacity=".13"/><rect x="60" y="80" width="90" height="130" rx="14" fill="#fff"/><rect x="68" y="62" width="74" height="26" rx="8" fill="#0b1437"/><rect x="76" y="120" width="58" height="50" rx="8" fill="#ff5d7a"/><path d="M105 130v30M90 145h30" stroke="#fff" stroke-width="7" stroke-linecap="round"/><g transform="rotate(-30 250 150)"><rect x="190" y="125" width="120" height="50" rx="25" fill="#fff"/><path d="M250 125h35a25 25 0 0 1 0 50h-35z" fill="#ffb547"/></g><circle cx="215" cy="205" r="22" fill="#fff"/><path d="M200 205h30" stroke="#0fa57a" stroke-width="4"/><circle cx="305" cy="200" r="16" fill="#7a4dff"/><circle cx="335" cy="180" r="12" fill="#fff"/></svg>';
+  a.pediatrics = W+'<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb547"/><stop offset="1" stop-color="#ff7aa0"/></linearGradient></defs><rect width="400" height="260" fill="url(#g)"/><circle cx="60" cy="50" r="70" fill="#fff" opacity=".14"/><circle cx="345" cy="220" r="90" fill="#fff" opacity=".12"/><circle cx="150" cy="75" r="26" fill="#a8693c"/><circle cx="250" cy="75" r="26" fill="#a8693c"/><circle cx="150" cy="75" r="13" fill="#e9b88a"/><circle cx="250" cy="75" r="13" fill="#e9b88a"/><ellipse cx="200" cy="205" rx="62" ry="58" fill="#b9774a"/><ellipse cx="200" cy="215" rx="36" ry="38" fill="#e9b88a"/><circle cx="200" cy="105" r="62" fill="#b9774a"/><ellipse cx="200" cy="124" rx="28" ry="21" fill="#e9b88a"/><circle cx="176" cy="96" r="6" fill="#241713"/><circle cx="224" cy="96" r="6" fill="#241713"/><ellipse cx="200" cy="116" rx="9" ry="6" fill="#ff5d7a"/><path d="M190 128q10 8 20 0" stroke="#241713" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M160 160q40 40 80 0" stroke="#2f6bff" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="200" cy="205" r="14" fill="#cfd8ff" stroke="#2f6bff" stroke-width="5"/></svg>';
+  return a;
+})();
+function artKey(src){
+  var m = /images\/([^\/.]+)/.exec(src || "");
+  if (!m) return null;
+  return m[1] === "general-medicine" ? "general" : m[1];
+}
+function artFallback(img){
+  var src = img.getAttribute("src") || "";
+  if (src.indexOf("data:") === 0) return;
+  var k = artKey(src);
+  if (k && ART[k]) { img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(ART[k]); }
+  img.style.display = "";
+}
+</script>
+<style>
+  :root{
+    --navy-950:#070d24;
+    --navy-900:#0b1437;
+    --navy-800:#12205a;
+    --blue:#2f6bff;
+    --blue-dark:#1d4fd8;
+    --cyan:#22d3ee;
+    --amber:#ffb547;
+    --rose:#ff5d7a;
+    --bg:#f3f6ff;
+    --card:#ffffff;
+    --ink:#0f1a3d;
+    --muted:#5d6a8f;
+    --line:rgba(15,26,61,0.1);
+    --grad:linear-gradient(135deg,#2f6bff 0%,#7a4dff 55%,#22d3ee 120%);
+    --grad-warm:linear-gradient(135deg,#ffb547,#ff5d7a);
+    --display:'Playfair Display', Georgia, serif;
+    --sans:'Manrope', system-ui, -apple-system, sans-serif;
+    --shadow:0 20px 50px -24px rgba(18,32,90,0.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  svg{display:block;}
+  img{max-width:100%;display:block;}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+    .reveal{opacity:1 !important;transform:none !important;}
+  }
+
+  /* ---------- scroll reveal ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.1s;} .reveal.d2{transition-delay:.2s;} .reveal.d3{transition-delay:.3s;} .reveal.d4{transition-delay:.4s;}
+
+  /* ---------- buttons ---------- */
+  .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;font-family:var(--sans);transition:transform .25s ease,box-shadow .25s ease;isolation:isolate;}
+  .btn::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s ease;z-index:-1;}
+  .btn:hover::before{left:130%;}
+  .btn:hover{transform:translateY(-3px);}
+  .btn:active{transform:translateY(0) scale(.97);}
+  .btn .arrow{transition:transform .25s ease;}
+  .btn:hover .arrow{transform:translateX(5px);}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 14px 30px -12px rgba(47,107,255,.7);}
+  .btn-primary:hover{box-shadow:0 20px 40px -14px rgba(122,77,255,.8);}
+  .btn-outline{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);}
+  .btn-outline:hover{background:rgba(255,255,255,.18);}
+  .btn-warm{background:var(--grad-warm);color:#fff;box-shadow:0 14px 30px -12px rgba(255,93,122,.7);}
+  .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.5);transform:scale(0);animation:ripple .6s linear;pointer-events:none;}
+  @keyframes ripple{to{transform:scale(4);opacity:0;}}
+
+  /* ---------- top strip ---------- */
+  .topstrip{background:var(--navy-950);color:#c9d4ff;font-size:.82rem;}
+  .topstrip .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap;}
+  .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#34e39a;margin-right:8px;animation:live 2s infinite;}
+  @keyframes live{0%{box-shadow:0 0 0 0 rgba(52,227,154,.6);}70%{box-shadow:0 0 0 8px rgba(52,227,154,0);}100%{box-shadow:0 0 0 0 rgba(52,227,154,0);}}
+  .topstrip a{font-weight:700;color:#fff;border-bottom:1px dashed rgba(255,255,255,.4);}
+
+  /* ---------- header ---------- */
+  header.site{position:sticky;top:0;z-index:60;background:rgba(243,246,255,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .3s ease;}
+  header.site.scrolled{box-shadow:0 10px 30px -18px rgba(18,32,90,.4);}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:44px;height:44px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -10px rgba(47,107,255,.8);animation:floaty 5s ease-in-out infinite;}
+  .brand-mark svg{width:24px;height:24px;}
+  .brand-name{font-family:var(--display);font-size:1.35rem;line-height:1.05;color:var(--navy-900);}
+  .brand-tag{font-size:.7rem;color:var(--muted);font-weight:600;letter-spacing:.04em;}
+  nav.primary ul{display:flex;gap:6px;font-weight:600;font-size:.92rem;}
+  nav.primary a{display:block;padding:9px 16px;border-radius:999px;color:var(--ink);transition:background .25s ease,color .25s ease;}
+  nav.primary a:hover,nav.primary a.active{background:var(--navy-900);color:#fff;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .nav-cta{padding:11px 22px;font-size:.88rem;}
+  .burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+  .burger span{width:20px;height:2px;background:var(--navy-900);border-radius:2px;transition:transform .3s ease,opacity .3s ease;}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(900px 500px at 85% 10%,rgba(122,77,255,.5),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(34,211,238,.28),transparent 60%),linear-gradient(160deg,var(--navy-950),var(--navy-800));}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;animation:drift 14s ease-in-out infinite;pointer-events:none;}
+  .blob.b1{width:280px;height:280px;background:#2f6bff;top:-60px;left:-60px;}
+  .blob.b2{width:240px;height:240px;background:#22d3ee;bottom:-80px;right:30%;animation-delay:-5s;}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,30px) scale(1.15);}}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:80px;padding-bottom:90px;}
+  .greeting-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);border-radius:999px;padding:8px 18px 8px 12px;font-size:.84rem;font-weight:600;margin-bottom:22px;}
+  .greeting-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:live 2s infinite;}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.08;letter-spacing:-.01em;}
+  .hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--cyan),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero .lede{margin-top:20px;color:#c9d4ff;font-size:1.06rem;max-width:48ch;}
+  .hero-actions{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-stats{margin-top:46px;display:flex;gap:16px;flex-wrap:wrap;}
+  .stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:16px 22px;min-width:118px;transition:transform .3s ease,background .3s ease;}
+  .stat:hover{transform:translateY(-5px);background:rgba(255,255,255,.14);}
+  .stat strong{display:block;font-family:var(--display);font-size:1.7rem;font-weight:400;}
+  .stat span{font-size:.76rem;color:#aebbee;}
+
+  .hero-visual{position:relative;}
+  .hero-img{border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.18);animation:floaty 7s ease-in-out infinite;}
+  .hero-img svg{width:100%;height:auto;}
+  @keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+  .chip{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 20px 40px -18px rgba(0,0,0,.55);font-size:.8rem;}
+  .chip strong{display:block;font-size:.95rem;color:var(--navy-900);}
+  .chip small{color:var(--muted);}
+  .chip .ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .chip.c1{left:-26px;bottom:48px;animation:floaty 6s ease-in-out infinite;}
+  .chip.c1 .ico{background:rgba(255,93,122,.14);}
+  .chip.c2{right:-14px;top:30px;animation:floaty 8s ease-in-out -2s infinite;}
+  .chip.c2 .ico{background:rgba(47,107,255,.14);}
+  .chip svg{width:20px;height:20px;}
+  .vitals{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 2.4s ease-out .8s forwards,glide 3s linear 3.2s infinite;}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes glide{to{stroke-dashoffset:-520;}}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:60ch;margin-bottom:52px;}
+  .kicker{display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:rgba(47,107,255,.1);padding:6px 14px;border-radius:999px;margin-bottom:14px;}
+  .section-head h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.12;color:var(--navy-900);}
+  .section-head p{margin-top:14px;color:var(--muted);font-size:1.02rem;}
+
+  /* ---------- about ---------- */
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .about-img{position:relative;}
+  .about-img .frame{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);transition:transform .5s ease;}
+  .about-img:hover .frame{transform:scale(1.02) rotate(-.6deg);}
+  .about-img .frame svg{width:100%;height:auto;}
+  .badge-years{position:absolute;right:-18px;bottom:-22px;background:var(--grad-warm);color:#fff;border-radius:22px;padding:18px 24px;text-align:center;box-shadow:0 20px 40px -16px rgba(255,93,122,.7);animation:floaty 6s ease-in-out infinite;}
+  .badge-years strong{font-family:var(--display);font-size:2rem;font-weight:400;display:block;line-height:1;}
+  .badge-years span{font-size:.72rem;font-weight:700;}
+  .about-copy p{color:var(--muted);margin-bottom:16px;}
+  .about-list{margin-top:24px;display:grid;gap:14px;}
+  .about-list li{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-weight:600;font-size:.92rem;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+  .about-list li:hover{transform:translateX(8px);box-shadow:var(--shadow);border-color:rgba(47,107,255,.35);}
+  .about-list .tick{width:34px;height:34px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .about-list .tick svg{width:16px;height:16px;}
+
+  /* ---------- departments ---------- */
+  .departments{background:linear-gradient(180deg,#fff,var(--bg));}
+  .dept-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .dept-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease;}
+  .dept-card:hover{transform:translateY(-10px);box-shadow:0 30px 50px -26px rgba(18,32,90,.5);}
+  .dept-art{height:170px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+  .dept-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+  .dept-card:hover .dept-art img{transform:scale(1.12);}
+  .dept-art::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,13,36,.55));z-index:1;pointer-events:none;}
+  .dept-art svg{position:absolute;left:14px;bottom:14px;width:42px;height:42px;padding:9px;border-radius:13px;background:rgba(255,255,255,.22);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4);z-index:2;transition:transform .4s ease;}
+  .dept-card:hover .dept-art svg{transform:scale(1.12) rotate(-6deg);}
+  /* fallback when an image file is missing */
+  .dept-art.noimg::before{display:none;}
+  .dept-art.noimg svg{position:static;width:56px;height:56px;padding:0;background:none;border:none;backdrop-filter:none;}
+  .dept-body{padding:20px 20px 24px;}
+  .dept-body h3{font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--navy-900);}
+  .dept-body p{font-size:.84rem;color:var(--muted);margin-top:6px;}
+  .g1{background:linear-gradient(135deg,#ff5d7a,#ff8a5d);}
+  .g2{background:linear-gradient(135deg,#7a4dff,#b06bff);}
+  .g3{background:linear-gradient(135deg,#2f6bff,#22d3ee);}
+  .g4{background:linear-gradient(135deg,#10b981,#34e3b0);}
+  .g5{background:linear-gradient(135deg,#ffb547,#ff8a5d);}
+
+  .dept-spotlight{margin-top:40px;border-radius:26px;padding:34px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:space-between;color:#fff;background:var(--navy-900);position:relative;overflow:hidden;}
+  .spot-bg{position:absolute;inset:0;opacity:.95;transition:background .5s ease;}
+  .dept-spotlight>*:not(.spot-bg){position:relative;z-index:1;}
+  .spotlight-info{display:flex;align-items:center;gap:22px;}
+  .spot-photo{width:150px;height:104px;border-radius:18px;object-fit:cover;flex-shrink:0;border:2px solid rgba(255,255,255,.55);box-shadow:0 16px 30px -14px rgba(0,0,0,.6);}
+  .spot-photo.swap{animation:pop .45s ease;}
+  .spotlight-icon{width:68px;height:68px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .spotlight-icon svg{width:34px;height:34px;}
+  .spotlight-text h4{font-family:var(--display);font-weight:400;font-size:1.6rem;}
+  .spotlight-text p{font-size:.94rem;opacity:.9;margin-top:4px;max-width:44ch;}
+  .spotlight-text.swap{animation:swap .45s ease;}
+  .spotlight-icon.swap{animation:pop .45s ease;}
+  @keyframes swap{from{opacity:0;transform:translateX(18px);}to{opacity:1;transform:none;}}
+  @keyframes pop{0%{transform:scale(.6) rotate(-12deg);}100%{transform:scale(1) rotate(0);}}
+  .spotlight-controls{display:flex;align-items:center;gap:14px;}
+  .spotlight-controls button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .25s ease,background .25s ease;}
+  .spotlight-controls button:hover{background:#fff;transform:scale(1.12);}
+  .spotlight-controls button:hover svg path{stroke:var(--navy-900);}
+  .spotlight-controls button svg{width:18px;height:18px;}
+  .spotlight-count{font-weight:700;font-size:.9rem;min-width:44px;text-align:center;}
+
+  /* ---------- specialists ---------- */
+  .doctor-card{display:grid;grid-template-columns:320px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow);}
+  .doctor-photo{background:linear-gradient(160deg,#dfe8ff,#efe6ff);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;min-height:340px;}
+  .doctor-photo svg{width:100%;height:auto;max-height:380px;transition:transform .6s ease;}
+  .doctor-card:hover .doctor-photo svg{transform:scale(1.05);}
+  .doctor-info{padding:40px;}
+  .doctor-info h4{font-family:var(--display);font-weight:400;font-size:1.8rem;color:var(--navy-900);}
+  .doctor-role{color:var(--blue);font-weight:700;font-size:.9rem;margin-top:2px;}
+  .doctor-summary{margin-top:14px;color:var(--muted);}
+  .doctor-details{margin-top:18px;padding:18px 20px;border-radius:16px;background:var(--bg);display:grid;gap:8px;font-size:.92rem;color:var(--ink);animation:swap .4s ease;}
+  .doctor-details.hidden{display:none;}
+  .toggle-btn{margin-top:22px;background:var(--navy-900);color:#fff;padding:12px 24px;}
+
+  /* ---------- bill ---------- */
+  .bill-estimate{background:var(--navy-900);color:#fff;position:relative;overflow:hidden;}
+  .bill-estimate::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(122,77,255,.5),transparent 70%);top:-120px;right:-80px;}
+  .bill-estimate .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .bill-estimate .section-head{margin:0;}
+  .bill-estimate .section-head h2{color:#fff;}
+  .bill-estimate .section-head p{color:#b6c3f2;}
+  .bill-estimate .kicker{background:rgba(255,255,255,.12);color:var(--cyan);}
+  .bill-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);border-radius:26px;padding:32px;}
+  .bill-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-radius:14px;margin-bottom:10px;border:1px solid transparent;transition:background .25s ease,border-color .25s ease;}
+  .bill-row:hover{background:rgba(255,255,255,.08);}
+  .bill-row:has(input:checked){background:rgba(34,211,238,.14);border-color:rgba(34,211,238,.5);}
+  .bill-row label{display:flex;align-items:center;gap:14px;cursor:pointer;font-weight:600;}
+  .bill-row input{width:20px;height:20px;accent-color:var(--cyan);cursor:pointer;}
+  .bill-row .price{font-weight:800;color:var(--amber);}
+  .bill-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;padding-top:20px;border-top:1.5px dashed rgba(255,255,255,.3);}
+  .bill-total span{color:#b6c3f2;font-weight:600;}
+  .bill-total strong{font-family:var(--display);font-weight:400;font-size:2.4rem;display:inline-block;}
+  .bill-total strong.bump{animation:bump .35s ease;}
+  @keyframes bump{50%{transform:scale(1.18);color:var(--cyan);}}
+
+  /* ---------- appointment ---------- */
+  .appointment .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
+  .appt-art{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);margin-top:28px;}
+  .appt-art svg{width:100%;height:auto;}
+  .appointment .section-head{margin-bottom:0;}
+  .appointment-form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:36px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .form-field{display:flex;flex-direction:column;gap:6px;}
+  .form-field.full{grid-column:1/-1;}
+  .form-field label{font-size:.84rem;font-weight:700;color:var(--navy-900);}
+  .form-field input{border:1.5px solid var(--line);border-radius:14px;padding:13px 16px;font-size:.95rem;font-family:var(--sans);background:var(--bg);color:var(--ink);transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;}
+  .form-field input:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(47,107,255,.15);}
+  .form-field.invalid input{border-color:var(--rose);animation:shake .4s ease;}
+  @keyframes shake{25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+  .field-error{font-size:.76rem;color:var(--rose);min-height:1em;font-weight:600;}
+  .appointment-form .btn{grid-column:1/-1;justify-self:start;}
+  #appointmentMessage{grid-column:1/-1;font-size:.92rem;font-weight:700;padding:14px 18px;border-radius:14px;display:none;}
+  #appointmentMessage.success{display:block;background:rgba(16,185,129,.14);color:#0a7a56;animation:swap .4s ease;}
+  #appointmentMessage.error{display:block;background:rgba(255,93,122,.12);color:#c9304f;animation:swap .4s ease;}
+
+  /* ---------- emergency ---------- */
+  .emergency{padding:0;background:var(--grad-warm);color:#fff;position:relative;overflow:hidden;}
+  .emergency::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 14px,transparent 14px 28px);}
+  .emergency .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:28px;padding-top:50px;padding-bottom:50px;flex-wrap:wrap;}
+  .emergency-left{display:flex;align-items:center;gap:22px;}
+  .er-ring{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0;}
+  .er-ring::before,.er-ring::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,255,255,.6);animation:ring 2.4s ease-out infinite;}
+  .er-ring::after{animation-delay:1.2s;}
+  @keyframes ring{0%{transform:scale(.85);opacity:.9;}100%{transform:scale(1.7);opacity:0;}}
+  .er-ring svg{width:28px;height:28px;}
+  .emergency h3{font-family:var(--display);font-weight:400;font-size:1.6rem;}
+  .emergency p{font-size:.94rem;opacity:.95;}
+  .emergency-number{background:#fff;color:#d63a58;font-family:var(--display);font-size:1.9rem;padding:12px 30px;border-radius:999px;box-shadow:0 18px 36px -14px rgba(0,0,0,.4);transition:transform .25s ease;}
+  .emergency-number:hover{transform:scale(1.07) rotate(-1.5deg);}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-950);color:#aebbee;padding:64px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-grid h4{font-family:var(--display);font-weight:400;color:#fff;font-size:1.15rem;margin-bottom:16px;}
+  .footer-grid ul{display:grid;gap:10px;font-size:.88rem;}
+  .footer-grid ul a{transition:color .2s ease,padding-left .2s ease;}
+  .footer-grid ul a:hover{color:var(--cyan);padding-left:6px;}
+  .footer-brand p{font-size:.88rem;max-width:34ch;}
+  .footer-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:.8rem;color:#6f7eb3;flex-wrap:wrap;gap:10px;}
+
+  /* ---------- back to top ---------- */
+  .to-top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:none;background:var(--grad);color:#fff;cursor:pointer;box-shadow:0 14px 30px -10px rgba(47,107,255,.8);opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .3s ease,transform .3s ease;z-index:70;display:flex;align-items:center;justify-content:center;}
+  .to-top.show{opacity:1;pointer-events:auto;transform:none;}
+  .to-top:hover{transform:translateY(-4px);}
+  .to-top svg{width:20px;height:20px;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1040px){
+    .dept-grid{grid-template-columns:repeat(3,1fr);}
+    .hero .wrap{gap:32px;}
+  }
+  @media (max-width:900px){
+    section{padding:72px 0;}
+    .hero .wrap,.about .wrap,.bill-estimate .wrap,.appointment .wrap{grid-template-columns:1fr;gap:40px;}
+    .hero .wrap{padding-top:56px;padding-bottom:70px;}
+    .hero-visual{max-width:520px;margin:0 auto;width:100%;}
+    .chip.c1{left:-8px;} .chip.c2{right:-6px;}
+    .about-img{max-width:520px;}
+    .badge-years{right:8px;}
+    .burger{display:flex;}
+    .nav-cta{display:none;}
+    nav.primary{position:absolute;top:100%;left:0;right:0;background:rgba(243,246,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    nav.primary.open{max-height:380px;}
+    nav.primary ul{flex-direction:column;padding:14px 28px 22px;gap:4px;}
+    nav.primary a{padding:13px 16px;}
+    .doctor-card{grid-template-columns:1fr;}
+    .doctor-photo{min-height:280px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 18px;}
+    .dept-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+    .dept-art{height:130px;}
+    .spot-photo{width:100%;height:150px;}
+    .spotlight-info{flex-wrap:wrap;}
+    .dept-body{padding:16px;}
+    .appointment-form{grid-template-columns:1fr;padding:24px;}
+    .doctor-info{padding:26px;}
+    .dept-spotlight{padding:26px;}
+    .emergency .wrap{flex-direction:column;align-items:flex-start;}
+    .emergency-number{font-size:1.5rem;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero-stats .stat{flex:1;min-width:96px;padding:14px;}
+    .chip{padding:9px 12px;} .chip.c2{top:14px;}
+    .bill-card{padding:22px;}
+  }
+  @media (max-width:420px){
+    .dept-grid{grid-template-columns:1fr;}
+    .brand-tag{display:none;}
+  }
+
+  /* ---------- BrightLife visual refresh ---------- */
+  :root{
+    --navy-950:#092b2a;
+    --navy-900:#104442;
+    --navy-800:#17645d;
+    --blue:#16877b;
+    --blue-dark:#0e6d64;
+    --cyan:#78d9c5;
+    --amber:#f4c66a;
+    --rose:#e58a78;
+    --bg:#f2f8f5;
+    --card:#ffffff;
+    --ink:#173b38;
+    --muted:#607b76;
+    --line:rgba(16,68,66,.12);
+    --grad:linear-gradient(135deg,#16877b 0%,#35b69c 58%,#9adcc8 120%);
+    --grad-warm:linear-gradient(135deg,#e9ad55,#e58a78);
+    --shadow:0 22px 55px -28px rgba(16,68,66,.32);
+  }
+  body{
+    background-color:var(--bg);
+    background-image:radial-gradient(circle at 8% 18%,rgba(120,217,197,.13) 0 2px,transparent 2.5px),
+      radial-gradient(circle at 92% 62%,rgba(22,135,123,.08) 0 2px,transparent 2.5px);
+    background-size:34px 34px,46px 46px;
+  }
+  header.site{background:rgba(242,248,245,.88);}
+  .hero{
+    background:
+      radial-gradient(760px 460px at 86% 8%,rgba(120,217,197,.28),transparent 62%),
+      radial-gradient(620px 420px at 0% 100%,rgba(244,198,106,.16),transparent 62%),
+      linear-gradient(145deg,#082f2e 0%,#10534c 58%,#16766a 100%);
+  }
+  .hero h1 em{background:linear-gradient(90deg,#9ce7d2,#f4d58f);-webkit-background-clip:text;background-clip:text;}
+  .hero-img{border-radius:34px;border:5px solid rgba(255,255,255,.13);box-shadow:0 34px 80px -34px rgba(0,0,0,.62);}
+  .chip{border:1px solid rgba(16,68,66,.08);box-shadow:0 18px 42px -22px rgba(0,0,0,.42);}
+  .section-head h2,.brand-name,.dept-body h3,.doctor-info h4{letter-spacing:-.025em;}
+  .kicker{color:#0e776c;background:rgba(53,182,156,.13);}
+  .departments{background:linear-gradient(180deg,#fff 0%,#f2f8f5 100%);}
+  .dept-card{border-radius:24px;box-shadow:0 8px 28px -22px rgba(16,68,66,.4);}
+  .dept-card:hover{box-shadow:0 28px 48px -26px rgba(16,68,66,.38);}
+  .dept-spotlight{background:linear-gradient(120deg,#104442,#16766a);}
+  .doctor-photo{background:linear-gradient(145deg,#d8f0e8,#edf7f1);}
+  .bill-estimate{background:linear-gradient(145deg,#092f2d,#12554e);}
+  .bill-estimate::before{background:radial-gradient(circle,rgba(120,217,197,.24),transparent 70%);}
+  .bill-row:has(input:checked){background:rgba(120,217,197,.14);border-color:rgba(120,217,197,.48);}
+  .bill-row input{accent-color:#78d9c5;}
+  .bill-row .price{color:#f4d58f;}
+  .form-field input:focus{border-color:#16877b;box-shadow:0 0 0 4px rgba(22,135,123,.13);}
+  .emergency{background:linear-gradient(110deg,#d98568,#e9ad55);}
+  .emergency-number{color:#a64e3c;}
+  footer{background:linear-gradient(145deg,#082b2a,#104442);}
+  .footer-grid ul a:hover{color:#9ce7d2;}
+  .to-top{background:linear-gradient(135deg,#16877b,#35b69c);}
+  .brand-mark{background:linear-gradient(135deg,#16877b,#35b69c);border-radius:15px;}
+  .about-list .tick{background:linear-gradient(135deg,#16877b,#35b69c);}
+  .btn-primary{background:linear-gradient(135deg,#16877b,#35b69c);box-shadow:0 14px 30px -12px rgba(22,135,123,.55);}
+  .btn-primary:hover{box-shadow:0 20px 40px -14px rgba(22,135,123,.58);}
+  .btn-warm{background:linear-gradient(135deg,#e9ad55,#df8976);}
+  @media(max-width:900px){nav.primary{background:rgba(242,248,245,.98);}}
+
+</style>
+</head>
+<body>
+
+<div class="topstrip">
+  <div class="wrap">
+    <div><span class="live" aria-hidden="true"></span>24/7 emergency care available</div>
+    <div>Emergency line: <a href="tel:2550909">2550909</a></div>
+  </div>
+</div>
+
+<header class="site" id="siteHeader">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16M4 12h16" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg></div>
+      <div>
+        <div class="brand-name">BrightLife Hospital</div>
+        <div class="brand-tag">Compassionate care. Brighter lives.</div>
+      </div>
+    </a>
+    <nav class="primary" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#specialists">Doctors</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-warm nav-cta" href="tel:2550909">Call now</a>
+      <button class="burger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home" style="padding:0;">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <div class="greeting-badge" id="greetingBadge"><span class="dot" aria-hidden="true"></span><span id="greetingText">Welcome to BrightLife Hospital</span></div>
+      <h1>Care that shows up <em>when you need it most.</em></h1>
+      <p class="lede">BrightLife Hospital brings together experienced doctors, trained staff, and modern facilities — so every visit, planned or urgent, gets the same steady attention.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#appointment">Book an appointment <span class="arrow">→</span></a>
+        <a class="btn btn-outline" href="#services">View our services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>24/7</strong><span>Emergency response</span></div>
+        <div class="stat"><strong>5</strong><span>Core departments</span></div>
+        <div class="stat"><strong>1000+</strong><span>Patients yearly</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal d2">
+      <div class="hero-img">
+        <!-- Illustration: hospital building at dusk -->
+        <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of BrightLife Hospital building">
+          <defs>
+            <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3b9c"/><stop offset=".6" stop-color="#7a4dff"/><stop offset="1" stop-color="#ffb08a"/></linearGradient>
+            <linearGradient id="bld1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe8ff"/></linearGradient>
+          </defs>
+          <rect width="520" height="460" fill="url(#sky1)"/>
+          <circle cx="410" cy="95" r="38" fill="#fff3d6" opacity=".95"/>
+          <circle cx="410" cy="95" r="62" fill="#fff3d6" opacity=".18"/>
+          <g fill="#fff" opacity=".7"><circle cx="60" cy="60" r="2"/><circle cx="130" cy="110" r="1.6"/><circle cx="220" cy="48" r="2"/><circle cx="300" cy="90" r="1.4"/><circle cx="480" cy="40" r="1.8"/><circle cx="90" cy="170" r="1.4"/></g>
+          <path d="M0 330 Q130 290 260 320 T520 310 V460 H0Z" fill="#1d2a7a" opacity=".55"/>
+          <!-- side wings -->
+          <rect x="60" y="230" width="120" height="170" rx="6" fill="url(#bld1)"/>
+          <rect x="340" y="230" width="120" height="170" rx="6" fill="url(#bld1)"/>
+          <!-- main tower -->
+          <rect x="160" y="150" width="200" height="250" rx="8" fill="url(#bld1)"/>
+          <rect x="160" y="150" width="200" height="16" rx="8" fill="#2f6bff"/>
+          <!-- cross sign -->
+          <rect x="226" y="86" width="68" height="68" rx="16" fill="#ff5d7a"/>
+          <path d="M260 102v36M242 120h36" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+          <!-- windows -->
+          <g fill="#2f6bff" opacity=".85">
+            <rect x="182" y="184" width="26" height="30" rx="5"/><rect x="224" y="184" width="26" height="30" rx="5"/><rect x="270" y="184" width="26" height="30" rx="5"/><rect x="312" y="184" width="26" height="30" rx="5"/>
+            <rect x="182" y="232" width="26" height="30" rx="5"/><rect x="224" y="232" width="26" height="30" rx="5" fill="#ffd36e"/><rect x="270" y="232" width="26" height="30" rx="5"/><rect x="312" y="232" width="26" height="30" rx="5" fill="#ffd36e"/>
+            <rect x="182" y="280" width="26" height="30" rx="5" fill="#ffd36e"/><rect x="224" y="280" width="26" height="30" rx="5"/><rect x="270" y="280" width="26" height="30" rx="5" fill="#ffd36e"/><rect x="312" y="280" width="26" height="30" rx="5"/>
+          </g>
+          <g fill="#7a4dff" opacity=".55">
+            <rect x="80" y="256" width="22" height="26" rx="4"/><rect x="118" y="256" width="22" height="26" rx="4"/><rect x="80" y="300" width="22" height="26" rx="4"/><rect x="118" y="300" width="22" height="26" rx="4"/>
+            <rect x="360" y="256" width="22" height="26" rx="4"/><rect x="398" y="256" width="22" height="26" rx="4"/><rect x="360" y="300" width="22" height="26" rx="4"/><rect x="398" y="300" width="22" height="26" rx="4"/>
+          </g>
+          <!-- door -->
+          <rect x="232" y="338" width="56" height="62" rx="8" fill="#12205a"/>
+          <rect x="237" y="344" width="22" height="56" fill="#22d3ee" opacity=".6"/><rect x="261" y="344" width="22" height="56" fill="#22d3ee" opacity=".6"/>
+          <!-- ground & ambulance -->
+          <rect y="400" width="520" height="60" fill="#12205a"/>
+          <rect y="428" width="520" height="4" fill="#fff" opacity=".3"/>
+          <g transform="translate(375 372)">
+            <rect width="92" height="40" rx="8" fill="#fff"/><rect x="62" y="6" width="26" height="18" rx="4" fill="#bfe9ff"/>
+            <rect x="8" y="14" width="40" height="5" fill="#ff5d7a"/><rect x="25" y="3" width="6" height="28" fill="#ff5d7a" transform="translate(-6 0)"/>
+            <circle cx="20" cy="42" r="8" fill="#0b1437"/><circle cx="72" cy="42" r="8" fill="#0b1437"/>
+            <rect x="40" y="-6" width="12" height="6" rx="2" fill="#ff5d7a"/>
+          </g>
+        </svg>
+      </div>
+      <div class="chip c1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0 5-8 10.5-8 10.5S4 13.5 4 8.5a4.5 4.5 0 018-2.6A4.5 4.5 0 0120 8.5z" fill="#ff5d7a"/></svg></div>
+        <div><strong>Live vitals</strong><small>Stable</small>
+          <svg viewBox="0 0 100 24" width="90" height="22" fill="none"><path class="vitals" d="M0 12H22L28 3L36 21L43 8L48 12H100" stroke="#ff5d7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="chip c2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#2f6bff" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div><strong>24/7 ER</strong><small>No appointment needed</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal">
+      <div class="frame">
+        <!-- Illustration: care team in a ward -->
+        <svg viewBox="0 0 520 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a doctor and nurse caring for a patient">
+          <defs>
+            <linearGradient id="wardbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dfe8ff"/><stop offset="1" stop-color="#f1e8ff"/></linearGradient>
+          </defs>
+          <rect width="520" height="440" fill="url(#wardbg)"/>
+          <rect x="0" y="340" width="520" height="100" fill="#c9d6ff"/>
+          <!-- window -->
+          <rect x="40" y="40" width="150" height="130" rx="14" fill="#fff"/><rect x="50" y="50" width="130" height="110" rx="8" fill="#bfe3ff"/>
+          <path d="M115 50v110M50 105h130" stroke="#fff" stroke-width="5"/>
+          <circle cx="150" cy="80" r="14" fill="#ffe28a"/>
+          <!-- wall cross -->
+          <rect x="400" y="50" width="70" height="70" rx="16" fill="#fff"/><path d="M435 66v38M416 85h38" stroke="#ff5d7a" stroke-width="9" stroke-linecap="round"/>
+          <!-- bed -->
+          <rect x="250" y="270" width="230" height="22" rx="8" fill="#fff"/>
+          <rect x="250" y="292" width="8" height="70" fill="#8da2e8"/><rect x="472" y="292" width="8" height="70" fill="#8da2e8"/>
+          <rect x="250" y="226" width="14" height="66" rx="5" fill="#8da2e8"/>
+          <rect x="270" y="248" width="60" height="26" rx="12" fill="#fff"/>
+          <path d="M300 272h180v-14c0-8-6-14-14-14H340z" fill="#7a4dff"/>
+          <circle cx="302" cy="246" r="20" fill="#f7c9a4"/>
+          <path d="M284 240c4-18 32-18 36 0c-10-6-26-6-36 0z" fill="#3b2a24"/>
+          <!-- doctor -->
+          <g transform="translate(110 130)">
+            <rect x="6" y="110" width="30" height="130" rx="10" fill="#27357f"/><rect x="46" y="110" width="30" height="130" rx="10" fill="#27357f"/>
+            <rect x="-6" y="40" width="94" height="130" rx="26" fill="#fff"/>
+            <path d="M41 40l-14 38l14 18l14-18z" fill="#dfe8ff"/>
+            <path d="M24 56c-6 26 6 44 17 44s23-18 17-44" fill="none" stroke="#2f6bff" stroke-width="4" stroke-linecap="round"/><circle cx="41" cy="104" r="6" fill="#22d3ee"/>
+            <rect x="26" y="20" width="30" height="26" rx="10" fill="#f2bf98"/>
+            <circle cx="41" cy="6" r="30" fill="#f7c9a4"/>
+            <path d="M12 2c0-24 58-24 58 0c-10-12-46-12-58 0z" fill="#2a1d1a"/>
+            <circle cx="30" cy="8" r="3" fill="#2a1d1a"/><circle cx="52" cy="8" r="3" fill="#2a1d1a"/>
+            <path d="M32 22q9 8 18 0" stroke="#b5604a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <rect x="82" y="64" width="40" height="52" rx="6" fill="#2f6bff" transform="rotate(10 82 64)"/><rect x="90" y="76" width="24" height="4" fill="#fff" transform="rotate(10 90 76)"/><rect x="90" y="86" width="18" height="4" fill="#fff" transform="rotate(10 90 86)"/>
+          </g>
+          <!-- drip stand -->
+          <path d="M420 120v160" stroke="#8da2e8" stroke-width="5"/><rect x="408" y="110" width="30" height="46" rx="10" fill="#fff" stroke="#22d3ee" stroke-width="3"/><rect x="414" y="132" width="18" height="20" rx="6" fill="#22d3ee" opacity=".6"/>
+          <path d="M423 156c0 40-60 40-100 80" stroke="#22d3ee" stroke-width="2.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="badge-years"><strong>14+</strong><span>Years of trusted care</span></div>
+    </div>
+    <div class="about-copy reveal d2">
+      <span class="kicker">About the hospital</span>
+      <div class="section-head" style="margin-bottom:18px;"><h2>Modern facilities, familiar faces</h2></div>
+      <p>BrightLife Hospital was built to close the gap between advanced medicine and genuine attention. Our teams work across cardiology, neurology, orthopedics, general medicine, and pediatrics, with equipment and protocols kept current so decisions aren't slowed down by outdated tools.</p>
+      <p>Whether it's a routine check-up or something that can't wait until Monday, the same standard of care applies — clear communication, careful diagnosis, and a plan you actually understand before you leave.</p>
+      <ul class="about-list">
+        <li><span class="tick"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.2 3.2L15 6.8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Experienced doctors across five departments</li>
+        <li><span class="tick"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.2 3.2L15 6.8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Trained nursing and support staff</li>
+        <li><span class="tick"><svg viewBox="0 0 20 20" fill="none"><path d="M5 10.5l3.2 3.2L15 6.8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Modern diagnostic and treatment facilities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPARTMENTS ================= -->
+<section class="departments" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Our services</span>
+      <h2>Five departments, one standard of care</h2>
+      <p>Each staffed by specialists who treat the person in front of them, not just the chart.</p>
+    </div>
+    <div class="dept-grid">
+      <div class="dept-card reveal">
+        <div class="dept-art g1"><img src="images/cardiology.jpg" alt="Doctor holding a model of a human heart" loading="lazy" onerror="artFallback(this)"><svg viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0 5-8 10.5-8 10.5S4 13.5 4 8.5a4.5 4.5 0 018-2.6A4.5 4.5 0 0120 8.5z" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dept-body"><h3>Cardiology</h3><p>Heart health screening, diagnosis, and ongoing care.</p></div>
+      </div>
+      <div class="dept-card reveal d1">
+        <div class="dept-art g2"><img src="images/neurology.jpg" alt="Illustration of a brain circuit inside a head profile" loading="lazy" onerror="artFallback(this)"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5c-2 0-3.5 1.6-3.5 3.6 0 1 .4 1.9 1 2.5-.6.6-1 1.5-1 2.5C4.5 15.6 6 17 8 17M16 5c2 0 3.5 1.6 3.5 3.6 0 1-.4 1.9-1 2.5.6.6 1 1.5 1 2.5 0 2-1.5 3.4-3.5 3.4M12 5v14" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="dept-body"><h3>Neurology</h3><p>Care for the brain, spine, and nervous system.</p></div>
+      </div>
+      <div class="dept-card reveal d2">
+        <div class="dept-art g3"><img src="images/orthopedics.jpg" alt="X-ray of a leg with bone plate and screws" loading="lazy" onerror="artFallback(this)"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18l4-10 2 5 2-5 4 10M6 18h12" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="dept-body"><h3>Orthopedics</h3><p>Bone, joint, and muscle treatment and recovery.</p></div>
+      </div>
+      <div class="dept-card reveal d3">
+        <div class="dept-art g4"><img src="images/general-medicine.jpg" alt="Assorted medicines, tablets and bottles" loading="lazy" onerror="artFallback(this)"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="16" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M9 9h6M9 13h6M9 17h3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="dept-body"><h3>General Medicine</h3><p>Everyday health concerns and preventive checkups.</p></div>
+      </div>
+      <div class="dept-card reveal d4">
+        <div class="dept-art g5"><img src="images/pediatrics.jpg" alt="Teddy bear with a stethoscope" loading="lazy" onerror="artFallback(this)"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="#fff" stroke-width="1.6"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="dept-body"><h3>Pediatrics</h3><p>Gentle, attentive care for infants and children.</p></div>
+      </div>
+    </div>
+
+    <div class="dept-spotlight reveal">
+      <div class="spot-bg" id="spotBg"></div>
+      <div class="spotlight-info">
+        <img class="spot-photo" id="spotPhoto" src="images/cardiology.jpg" alt="" onerror="artFallback(this)">
+        <div class="spotlight-icon" id="spotlightIcon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0 5-8 10.5-8 10.5S4 13.5 4 8.5a4.5 4.5 0 018-2.6A4.5 4.5 0 0120 8.5z" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="spotlight-text" id="spotlightText">
+          <h4 id="spotlightTitle">Cardiology</h4>
+          <p id="spotlightDesc">Heart health screening, diagnosis, and ongoing care.</p>
+        </div>
+      </div>
+      <div class="spotlight-controls">
+        <button type="button" id="spotlightPrev" aria-label="Previous department"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <span class="spotlight-count" id="spotlightCount">1 / 5</span>
+        <button type="button" id="spotlightNext" aria-label="Next department"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIALISTS ================= -->
+<section class="specialists" id="specialists">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Our doctors</span>
+      <h2>Meet our specialists</h2>
+      <p>A closer look at the people behind your care.</p>
+    </div>
+    <div class="doctor-card reveal">
+      <div class="doctor-photo">
+        <!-- Illustration: doctor portrait -->
+        <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portrait illustration of Dr. Preet Soni">
+          <circle cx="160" cy="150" r="120" fill="#fff" opacity=".55"/>
+          <path d="M40 380c0-80 52-130 120-130s120 50 120 130z" fill="#fff"/>
+          <path d="M160 250l-34 60l34 70l34-70z" fill="#2f6bff" opacity=".15"/>
+          <path d="M128 252l32 48l32-48" fill="#dfe8ff"/>
+          <path d="M118 270c-14 50 6 84 42 84s56-34 42-84" fill="none" stroke="#1d2a7a" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="160" cy="356" r="12" fill="#22d3ee"/>
+          <rect x="140" y="206" width="40" height="50" rx="16" fill="#e9b48c"/>
+          <ellipse cx="160" cy="150" rx="54" ry="62" fill="#f4c19b"/>
+          <path d="M104 150c-12-70 58-92 98-56c24 22 20 44 14 64c-6-34-30-54-62-54c-32 0-42 20-50 46z" fill="#241713"/>
+          <path d="M104 150c-10 34-4 70 10 90c-14-20-18-60-10-90z" fill="#241713"/>
+          <ellipse cx="140" cy="158" rx="5" ry="6" fill="#241713"/><ellipse cx="182" cy="158" rx="5" ry="6" fill="#241713"/>
+          <path d="M136 148q6-5 12 0M176 148q6-5 12 0" stroke="#241713" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M142 184q18 16 36 0" stroke="#b5604a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="132" cy="178" r="9" fill="#ff8a8a" opacity=".25"/><circle cx="190" cy="178" r="9" fill="#ff8a8a" opacity=".25"/>
+          <circle cx="160" cy="132" r="3.5" fill="#ff5d7a"/>
+        </svg>
+      </div>
+      <div class="doctor-info">
+        <h4>Dr. Preet Soni</h4>
+        <div class="doctor-role">Senior Cardiologist, MD (Cardiology)</div>
+        <p class="doctor-summary">Leads the cardiology department, focused on preventive heart care and long-term patient follow-up.</p>
+        <div class="doctor-details hidden" id="doctorDetails">
+          <p><strong>Experience:</strong> 9 years in interventional and preventive cardiology.</p>
+          <p><strong>Availability:</strong> Mon–Sat, 9:00 AM – 4:00 PM.</p>
+          <p><strong>Specializations:</strong> Angioplasty, ECG diagnostics, cardiac rehabilitation.</p>
+        </div>
+        <button type="button" class="btn toggle-btn" id="doctorToggle">Read more</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BILL ESTIMATE ================= -->
+<section class="bill-estimate" id="bill-estimate">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Plan ahead</span>
+      <h2>Estimate your visit cost</h2>
+      <p>Select the services you expect to need and see an approximate total before you visit.</p>
+    </div>
+    <div class="bill-card reveal d2">
+      <div class="bill-row">
+        <label><input type="checkbox" class="bill-item" value="500" data-name="Consultation"> Consultation</label>
+        <span class="price">₹500</span>
+      </div>
+      <div class="bill-row">
+        <label><input type="checkbox" class="bill-item" value="300" data-name="Blood Test"> Blood Test</label>
+        <span class="price">₹300</span>
+      </div>
+      <div class="bill-row">
+        <label><input type="checkbox" class="bill-item" value="700" data-name="X-Ray"> X-Ray</label>
+        <span class="price">₹700</span>
+      </div>
+      <div class="bill-total">
+        <span>Estimated total</span>
+        <strong id="billTotal">₹0</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPOINTMENT ================= -->
+<section class="appointment" id="appointment">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-head">
+        <span class="kicker">Book a visit</span>
+        <h2>Book an appointment</h2>
+        <p>Fill in your details and our team will confirm your slot shortly.</p>
+      </div>
+      <div class="appt-art">
+        <!-- Illustration: calendar -->
+        <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar illustration">
+          <defs><linearGradient id="calbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#7a4dff"/></linearGradient></defs>
+          <rect width="400" height="240" fill="url(#calbg)"/>
+          <circle cx="340" cy="30" r="70" fill="#fff" opacity=".1"/><circle cx="40" cy="220" r="60" fill="#22d3ee" opacity=".25"/>
+          <rect x="90" y="40" width="220" height="170" rx="20" fill="#fff"/>
+          <rect x="90" y="40" width="220" height="44" rx="20" fill="#ff5d7a"/><rect x="90" y="64" width="220" height="20" fill="#ff5d7a"/>
+          <rect x="130" y="26" width="10" height="28" rx="5" fill="#0b1437"/><rect x="260" y="26" width="10" height="28" rx="5" fill="#0b1437"/>
+          <g fill="#dfe8ff"><rect x="110" y="100" width="28" height="22" rx="6"/><rect x="146" y="100" width="28" height="22" rx="6"/><rect x="182" y="100" width="28" height="22" rx="6"/><rect x="218" y="100" width="28" height="22" rx="6"/><rect x="254" y="100" width="28" height="22" rx="6"/>
+            <rect x="110" y="132" width="28" height="22" rx="6"/><rect x="146" y="132" width="28" height="22" rx="6"/><rect x="218" y="132" width="28" height="22" rx="6"/><rect x="254" y="132" width="28" height="22" rx="6"/>
+            <rect x="110" y="164" width="28" height="22" rx="6"/><rect x="146" y="164" width="28" height="22" rx="6"/><rect x="182" y="164" width="28" height="22" rx="6"/></g>
+          <rect x="182" y="132" width="28" height="22" rx="6" fill="#2f6bff"/><path d="M190 143l4 4l8-9" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <form class="appointment-form reveal d2" id="appointmentForm" novalidate>
+      <div class="form-field">
+        <label for="patientName">Patient name</label>
+        <input type="text" id="patientName" placeholder="Full name">
+        <span class="field-error" id="err-patientName"></span>
+      </div>
+      <div class="form-field">
+        <label for="patientEmail">Email</label>
+        <input type="text" id="patientEmail" placeholder="you@example.com">
+        <span class="field-error" id="err-patientEmail"></span>
+      </div>
+      <div class="form-field">
+        <label for="patientMobile">Mobile number</label>
+        <input type="text" id="patientMobile" placeholder="10-digit number" inputmode="numeric">
+        <span class="field-error" id="err-patientMobile"></span>
+      </div>
+      <div class="form-field">
+        <label for="patientAge">Age</label>
+        <input type="text" id="patientAge" placeholder="Age in years" inputmode="numeric">
+        <span class="field-error" id="err-patientAge"></span>
+      </div>
+      <div class="form-field full">
+        <label for="appointmentDate">Appointment date</label>
+        <input type="date" id="appointmentDate">
+        <span class="field-error" id="err-appointmentDate"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Confirm appointment <span class="arrow">→</span></button>
+      <p id="appointmentMessage"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= EMERGENCY ================= -->
+<section class="emergency" id="emergency">
+  <div class="wrap">
+    <div class="emergency-left">
+      <div class="er-ring"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg></div>
+      <div>
+        <h3>Emergency services, every hour</h3>
+        <p>Round-the-clock care from our on-call doctors and emergency staff — no appointment needed.</p>
+      </div>
+    </div>
+    <a class="emergency-number" href="tel:2550909">25509090</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>BrightLife Hospital</h4>
+        <p>Modern healthcare facilities with experienced doctors and trained medical staff, open every day of the year.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About hospital</a></li>
+          <li><a href="#specialists">Doctors</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="#services">Cardiology</a></li>
+          <li><a href="#services">Neurology</a></li>
+          <li><a href="#services">Orthopedics</a></li>
+          <li><a href="#services">Pediatrics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Emergency: <a href="tel:2550909">2550909</a></li>
+          <li><a href="mailto:care@brightlifehospital.example">care@brightlifehospital.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BrightLife Hospital</span>
+      <span>Built for quality care, every day.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<script>
+/* ============ 1. Dynamic Greeting ============ */
+(function(){
+  var hour = new Date().getHours();
+  var greeting;
+  if (hour < 12) greeting = "Good Morning! Welcome to BrightLife Hospital.";
+  else if (hour < 18) greeting = "Good Afternoon! Welcome to BrightLife Hospital.";
+  else greeting = "Good Evening! Welcome to BrightLife Hospital.";
+  document.getElementById("greetingText").textContent = greeting;
+})();
+
+/* ============ 2. Department Spotlight ============ */
+(function(){
+  var departments = [
+    {name:"Cardiology", desc:"Heart health screening, diagnosis, and ongoing care.", bg:"linear-gradient(135deg,#ff5d7a,#ff8a5d)", img:"images/cardiology.jpg",
+     icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0 5-8 10.5-8 10.5S4 13.5 4 8.5a4.5 4.5 0 018-2.6A4.5 4.5 0 0120 8.5z" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
+    {name:"Neurology", desc:"Care for the brain, spine, and nervous system.", bg:"linear-gradient(135deg,#7a4dff,#b06bff)", img:"images/neurology.jpg",
+     icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M8 5c-2 0-3.5 1.6-3.5 3.6 0 1 .4 1.9 1 2.5-.6.6-1 1.5-1 2.5C4.5 15.6 6 17 8 17M16 5c2 0 3.5 1.6 3.5 3.6 0 1-.4 1.9-1 2.5.6.6 1 1.5 1 2.5 0 2-1.5 3.4-3.5 3.4M12 5v14" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>'},
+    {name:"Orthopedics", desc:"Bone, joint, and muscle treatment and recovery.", bg:"linear-gradient(135deg,#2f6bff,#22d3ee)", img:"images/orthopedics.jpg",
+     icon:'<svg viewBox="0 0 24 24" fill="none"><path d="M6 18l4-10 2 5 2-5 4 10M6 18h12" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
+    {name:"General Medicine", desc:"Everyday health concerns and preventive checkups.", bg:"linear-gradient(135deg,#10b981,#34e3b0)", img:"images/general-medicine.jpg",
+     icon:'<svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="16" rx="2" stroke="#fff" stroke-width="1.6"/><path d="M9 9h6M9 13h6M9 17h3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>'},
+    {name:"Pediatrics", desc:"Gentle, attentive care for infants and children.", bg:"linear-gradient(135deg,#ffb547,#ff8a5d)", img:"images/pediatrics.jpg",
+     icon:'<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="#fff" stroke-width="1.6"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>'}
+  ];
+  var current = 0;
+  var titleEl = document.getElementById("spotlightTitle");
+  var descEl = document.getElementById("spotlightDesc");
+  var iconEl = document.getElementById("spotlightIcon");
+  var countEl = document.getElementById("spotlightCount");
+  var textEl = document.getElementById("spotlightText");
+  var bgEl = document.getElementById("spotBg");
+  var photoEl = document.getElementById("spotPhoto");
+
+  function restart(el, cls){ el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+
+  function render() {
+    var d = departments[current];
+    titleEl.textContent = d.name;
+    descEl.textContent = d.desc;
+    iconEl.innerHTML = d.icon;
+    countEl.textContent = (current + 1) + " / " + departments.length;
+    bgEl.style.background = d.bg;
+    photoEl.alt = d.name;
+    photoEl.src = d.img;
+    restart(photoEl, "swap");
+    restart(textEl, "swap");
+    restart(iconEl, "swap");
+  }
+  document.getElementById("spotlightNext").addEventListener("click", function(){
+    current = (current + 1) % departments.length; render();
+  });
+  document.getElementById("spotlightPrev").addEventListener("click", function(){
+    current = (current - 1 + departments.length) % departments.length; render();
+  });
+  render();
+})();
+
+/* ============ 3. Show / Hide Doctor Details ============ */
+(function(){
+  var details = document.getElementById("doctorDetails");
+  var toggle = document.getElementById("doctorToggle");
+  toggle.addEventListener("click", function(){
+    if (details.classList.contains("hidden")) {
+      details.classList.remove("hidden");
+      toggle.textContent = "Read less";
+    } else {
+      details.classList.add("hidden");
+      toggle.textContent = "Read more";
+    }
+  });
+})();
+
+/* ============ 4. Dynamic Bill Calculation ============ */
+(function(){
+  var boxes = document.querySelectorAll(".bill-item");
+  var totalEl = document.getElementById("billTotal");
+  function update(){
+    var total = 0;
+    boxes.forEach(function(b){ if (b.checked) total += Number(b.value); });
+    totalEl.textContent = "₹" + total;
+    totalEl.classList.remove("bump"); void totalEl.offsetWidth; totalEl.classList.add("bump");
+  }
+  boxes.forEach(function(b){ b.addEventListener("change", update); });
+})();
+
+/* ============ 5. Appointment Form Validation ============ */
+(function(){
+  var form = document.getElementById("appointmentForm");
+  var message = document.getElementById("appointmentMessage");
+  var ids = ["patientName","patientEmail","patientMobile","patientAge","appointmentDate"];
+
+  var dateInput = document.getElementById("appointmentDate");
+  var t = new Date();
+  dateInput.min = t.getFullYear() + "-" + String(t.getMonth()+1).padStart(2,"0") + "-" + String(t.getDate()).padStart(2,"0");
+
+  function setError(id, text){
+    document.getElementById("err-" + id).textContent = text;
+    var field = document.getElementById(id).closest(".form-field");
+    if (text) field.classList.add("invalid"); else field.classList.remove("invalid");
+  }
+  function clearErrors(){
+    ids.forEach(function(id){ setError(id, ""); });
+    message.className = ""; message.textContent = "";
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    clearErrors();
+    var name = document.getElementById("patientName").value.trim();
+    var email = document.getElementById("patientEmail").value.trim();
+    var mobile = document.getElementById("patientMobile").value.trim();
+    var age = document.getElementById("patientAge").value.trim();
+    var date = document.getElementById("appointmentDate").value;
+    var valid = true;
+
+    if (name === "") { setError("patientName","Please enter the patient's name."); valid = false; }
+    else if (!/^[A-Za-z\s]{2,}$/.test(name)) { setError("patientName","Name should contain letters only."); valid = false; }
+
+    if (email === "") { setError("patientEmail","Please enter an email address."); valid = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("patientEmail","Please enter a valid email address."); valid = false; }
+
+    if (mobile === "") { setError("patientMobile","Please enter a mobile number."); valid = false; }
+    else if (!/^\d{10}$/.test(mobile)) { setError("patientMobile","Enter a valid 10-digit mobile number."); valid = false; }
+
+    if (age === "") { setError("patientAge","Please enter age."); valid = false; }
+    else if (isNaN(age) || Number(age) < 1 || Number(age) > 120) { setError("patientAge","Enter a valid age (1–120)."); valid = false; }
+
+    if (date === "") { setError("appointmentDate","Please select a date."); valid = false; }
+    else {
+      var today = new Date(); today.setHours(0,0,0,0);
+      if (new Date(date) < today) { setError("appointmentDate","Date cannot be in the past."); valid = false; }
+    }
+
+    if (valid) {
+      message.className = "success";
+      message.textContent = "Appointment request received! Our team will confirm shortly.";
+      form.reset();
+    } else {
+      message.className = "error";
+      message.textContent = "Please fix the highlighted fields and try again.";
+    }
+  });
+})();
+
+/* ============ Extras: menu, reveal, ripple, scroll ============ */
+(function(){
+  var burger = document.getElementById("burger");
+  var nav = document.getElementById("primaryNav");
+  burger.addEventListener("click", function(){
+    var open = nav.classList.toggle("open");
+    burger.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+  });
+  nav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      nav.classList.remove("open"); burger.classList.remove("open"); burger.setAttribute("aria-expanded", false);
+    });
+  });
+
+  // scroll reveal
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold:0.12});
+    items.forEach(function(el){ io.observe(el); });
+  } else { items.forEach(function(el){ el.classList.add("in"); }); }
+
+  // ripple on buttons
+  document.querySelectorAll(".btn").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      var r = btn.getBoundingClientRect();
+      var s = Math.max(r.width, r.height);
+      var span = document.createElement("span");
+      span.className = "ripple";
+      span.style.width = span.style.height = s + "px";
+      span.style.left = (e.clientX - r.left - s/2) + "px";
+      span.style.top = (e.clientY - r.top - s/2) + "px";
+      btn.appendChild(span);
+      setTimeout(function(){ span.remove(); }, 600);
+    });
+  });
+
+  // header shadow, back to top, active link
+  var header = document.getElementById("siteHeader");
+  var toTop = document.getElementById("toTop");
+  var links = nav.querySelectorAll("a");
+  var secs = [].map.call(links, function(a){ return document.querySelector(a.getAttribute("href")); });
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle("scrolled", y > 10);
+    toTop.classList.toggle("show", y > 600);
+    var idx = 0;
+    secs.forEach(function(s,i){ if (s && s.getBoundingClientRect().top < 140) idx = i; });
+    links.forEach(function(a,i){ a.classList.toggle("active", i === idx); });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+})();
+</script>
+</body>
+</html>
